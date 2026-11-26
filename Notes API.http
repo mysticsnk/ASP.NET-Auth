@@ -1,0 +1,48 @@
+@baseUrl = http://localhost:5254
+@aliceUsername = alice
+@alicePassword = AliceDemo123!
+@bobUsername = bob
+@bobPassword = BobDemo123!
+
+### API root
+GET {{baseUrl}}/
+
+### Protected route without a token (expect 401)
+GET {{baseUrl}}/notes
+
+### Log in as Alice
+# @name loginAlice
+POST {{baseUrl}}/login
+Content-Type: application/json
+
+{
+  "username": "{{aliceUsername}}",
+  "password": "{{alicePassword}}"
+}
+
+### Create Alice's note
+# @name createNote
+POST {{baseUrl}}/notes
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwidXNlcklkIjoiMSIsIm5hbWUiOiJhbGljZSIsImlhdCI6MTc5NTczMTUzOSwibmJmIjoxNzk1NzMxNTM5LCJleHAiOjE3OTU3MzE2NTksImlzcyI6Ik5vdGVzQXBwIn0.lh4qw_PKB0x7NvM04q0KR1Y53t6iJ9b2sWk5a2Cu5rY
+Content-Type: application/json
+
+{
+  "title": "Alice's private note",
+  "content": "Only Alice should be able to read, update, or delete this note."
+}
+
+### List Alice's notes
+GET {{baseUrl}}/notes
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwidXNlcklkIjoiMSIsIm5hbWUiOiJhbGljZSIsImlhdCI6MTc5NTczMTUzOSwibmJmIjoxNzk1NzMxNTM5LCJleHAiOjE3OTU3MzE2NTksImlzcyI6Ik5vdGVzQXBwIn0.lh4qw_PKB0x7NvM04q0KR1Y53t6iJ9b2sWk5a2Cu5rY
+
+### Log in as Bob
+# @name loginBob
+POST {{baseUrl}}/login
+Content-Type: application/json
+
+{
+  "username": "{{bobUsername}}",
+  "password": "{{bobPassword}}"
+}
+
+
