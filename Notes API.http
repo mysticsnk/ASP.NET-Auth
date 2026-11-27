@@ -23,7 +23,7 @@ Content-Type: application/json
 ### Create Alice's note
 # @name createNote
 POST {{baseUrl}}/notes
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwidXNlcklkIjoiMSIsIm5hbWUiOiJhbGljZSIsImlhdCI6MTc5NTczMTUzOSwibmJmIjoxNzk1NzMxNTM5LCJleHAiOjE3OTU3MzE2NTksImlzcyI6Ik5vdGVzQXBwIn0.lh4qw_PKB0x7NvM04q0KR1Y53t6iJ9b2sWk5a2Cu5rY
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwidXNlcklkIjoiMSIsIm5hbWUiOiJhbGljZSIsImlhdCI6MTc5NTc5NjE0OSwibmJmIjoxNzk1Nzk2MTQ5LCJleHAiOjE3OTU3OTYyNjksImlzcyI6Ik5vdGVzQXBwIn0.nFTmDANfFfhPvY6VosXtTLbqL_bYsTiYvcJJKppvHMw
 Content-Type: application/json
 
 {
@@ -33,7 +33,7 @@ Content-Type: application/json
 
 ### List Alice's notes
 GET {{baseUrl}}/notes
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwidXNlcklkIjoiMSIsIm5hbWUiOiJhbGljZSIsImlhdCI6MTc5NTczMTUzOSwibmJmIjoxNzk1NzMxNTM5LCJleHAiOjE3OTU3MzE2NTksImlzcyI6Ik5vdGVzQXBwIn0.lh4qw_PKB0x7NvM04q0KR1Y53t6iJ9b2sWk5a2Cu5rY
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyIiwidXNlcklkIjoiMiIsIm5hbWUiOiJib2IiLCJpYXQiOjE3OTU3OTYxNzksIm5iZiI6MTc5NTc5NjE3OSwiZXhwIjoxNzk1Nzk2Mjk5LCJpc3MiOiJOb3Rlc0FwcCJ9.r3ATkqrtO6aMv7uCEawlEA92m_UukayL1g7uGYejyVQ
 
 ### Log in as Bob
 # @name loginBob
